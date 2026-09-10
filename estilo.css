@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+body {
+    background-color: #000000; /* Fondo general negro */
+    color: #ffffff; /* Texto blanco por defecto para resaltar */
+    font-family: Arial, sans-serif;
+}
+
+/* --- Sección 1: Hero --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #000000 0%, #2c003e 100%);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #8a2be2;
+}
+
+.hero img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+}
+
+.hero h2 {
+    color: #b16ced; /* Morado claro */
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #8a2be2; /* Morado brillante */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero button:hover {
+    background-color: #5c1b98; /* Morado más oscuro al pasar el ratón */
+    transform: scale(1.05);
+}
+
+/* --- Sección 2: Container --- */
+.container {
+    display: flex;
+    flex-direction: row; /* Solicitado: flex-direction row */
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    gap: 50px;
+    background-color: #111111; /* Negro ligeramente grisáceo */
+    border-bottom: 3px solid #8a2be2;
+}
+
+.container img {
+    max-width: 40%;
+    border-radius: 12px;
+    border: 2px solid #8a2be2;
+}
+
+.container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d1d1d1;
+    max-width: 50%;
+}
+
+/* Responsividad para la sección 2 (En celulares se pondrá en columna) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .container img, .container p {
+        max-width: 100%;
+    }
+}
+
+/* --- Sección 3: Galería de imágenes centradas --- */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 20px;
+    background-color: #000000;
+}
+
+.gallery-item {
+    text-align: center; /* Centra el texto y la imagen internamente */
+}
+
+.gallery-item h3 {
+    color: #8a2be2;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.gallery-item img {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+}
+
+/* --- Sección 4: Footer --- */
+.footer {
+    background-color: #1a0024; /* Morado muy oscuro casi negro */
+    text-align: center;
+    padding: 30px;
+    color: #8a2be2;
+    font-weight: bold;
+}
